@@ -1,0 +1,23 @@
+{
+    "banca_inicial": 500.0,
+    "entrada_base": 1.0,
+    "banca_atual": 581.0,
+    "nivel_atual": 3,
+    "tabela": {
+        "1": 1.0,
+        "2": 2.0,
+        "3": 4.0
+    },
+    "wins_direto": 56,
+    "losses_direto": 0,
+    "wins_gale1": 26,
+    "losses_gale1": 26,
+    "wins_gale2": 0,
+    "losses_gale2": 0,
+    "wins_cor_dom": 4,
+    "losses_cor_dom": 2,
+    "pnl_direto": 72.0,
+    "pnl_gale1": 7.0,
+    "pnl_gale2": 0.0,
+    "pnl_cor_dom": 2.0
+}

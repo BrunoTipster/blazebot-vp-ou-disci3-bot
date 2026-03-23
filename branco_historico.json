@@ -1,0 +1,370 @@
+{
+  "total_brancos": 21,
+  "media_intervalo": 9.9,
+  "hora_mais_frequente": "19h",
+  "cor_antes_mais_freq": "P",
+  "cor_depois_mais_freq": "P",
+  "ultimo_branco_idx": 192,
+  "ultimo_idx": 192,
+  "ultima_atualizacao": "2026-03-22 20:25:14",
+  "ocorrencias": [
+    {
+      "id": 1,
+      "hora": "16:07:41",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": "P",
+      "sequencia_antes": [
+        "P",
+        "P",
+        "P"
+      ],
+      "intervalo_desde_ultimo": -1,
+      "rodada_idx": 4
+    },
+    {
+      "id": 2,
+      "hora": "16:20:42",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "cor_depois": "P",
+      "sequencia_antes": [
+        "P",
+        "V",
+        "P",
+        "V",
+        "V",
+        "V"
+      ],
+      "intervalo_desde_ultimo": 25,
+      "rodada_idx": 30
+    },
+    {
+      "id": 3,
+      "hora": "16:26:13",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "cor_depois": "V",
+      "sequencia_antes": [
+        "V",
+        "V",
+        "V",
+        "V",
+        "V",
+        "V"
+      ],
+      "intervalo_desde_ultimo": 10,
+      "rodada_idx": 41
+    },
+    {
+      "id": 4,
+      "hora": "16:36:45",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "cor_depois": null,
+      "sequencia_antes": [
+        "V",
+        "V",
+        "V",
+        "V",
+        "P",
+        "V"
+      ],
+      "intervalo_desde_ultimo": 20,
+      "rodada_idx": 62
+    },
+    {
+      "id": 5,
+      "hora": "17:04:48",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": null,
+      "sequencia_antes": [
+        "V",
+        "P"
+      ],
+      "intervalo_desde_ultimo": 2,
+      "rodada_idx": 65
+    },
+    {
+      "id": 6,
+      "hora": "19:07:34",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": "V",
+      "sequencia_antes": [
+        "P"
+      ],
+      "intervalo_desde_ultimo": 1,
+      "rodada_idx": 67
+    },
+    {
+      "id": 7,
+      "hora": "19:12:34",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "cor_depois": "B",
+      "sequencia_antes": [
+        "V",
+        "P",
+        "P",
+        "V",
+        "P",
+        "V"
+      ],
+      "intervalo_desde_ultimo": 9,
+      "rodada_idx": 77
+    },
+    {
+      "id": 8,
+      "hora": "19:13:05",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "cor_depois": "P",
+      "sequencia_antes": [
+        "V",
+        "P",
+        "P",
+        "V",
+        "P",
+        "V"
+      ],
+      "intervalo_desde_ultimo": 0,
+      "rodada_idx": 78
+    },
+    {
+      "id": 9,
+      "hora": "19:15:36",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": "B",
+      "sequencia_antes": [
+        "P",
+        "V",
+        "P",
+        "P",
+        "V",
+        "P"
+      ],
+      "intervalo_desde_ultimo": 4,
+      "rodada_idx": 83
+    },
+    {
+      "id": 10,
+      "hora": "19:16:05",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": "P",
+      "sequencia_antes": [
+        "P",
+        "V",
+        "P",
+        "P",
+        "V",
+        "P"
+      ],
+      "intervalo_desde_ultimo": 0,
+      "rodada_idx": 84
+    },
+    {
+      "id": 11,
+      "hora": "19:18:06",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "cor_depois": "P",
+      "sequencia_antes": [
+        "P",
+        "V",
+        "P",
+        "P",
+        "P",
+        "V"
+      ],
+      "intervalo_desde_ultimo": 3,
+      "rodada_idx": 88
+    },
+    {
+      "id": 12,
+      "hora": "19:19:36",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": null,
+      "sequencia_antes": [
+        "P",
+        "P",
+        "P",
+        "V",
+        "P",
+        "P"
+      ],
+      "intervalo_desde_ultimo": 2,
+      "rodada_idx": 91
+    },
+    {
+      "id": 13,
+      "hora": "19:30:07",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": "V",
+      "sequencia_antes": [
+        "V",
+        "P"
+      ],
+      "intervalo_desde_ultimo": 2,
+      "rodada_idx": 94
+    },
+    {
+      "id": 14,
+      "hora": "19:33:07",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "cor_depois": "P",
+      "sequencia_antes": [
+        "P",
+        "V",
+        "P",
+        "V",
+        "P",
+        "V"
+      ],
+      "intervalo_desde_ultimo": 5,
+      "rodada_idx": 100
+    },
+    {
+      "id": 15,
+      "hora": "19:38:08",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": "P",
+      "sequencia_antes": [
+        "V",
+        "V",
+        "P",
+        "V",
+        "V",
+        "P"
+      ],
+      "intervalo_desde_ultimo": 9,
+      "rodada_idx": 110
+    },
+    {
+      "id": 16,
+      "hora": "19:47:39",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": "V",
+      "sequencia_antes": [
+        "V",
+        "V",
+        "P",
+        "V",
+        "P",
+        "P"
+      ],
+      "intervalo_desde_ultimo": 18,
+      "rodada_idx": 129
+    },
+    {
+      "id": 17,
+      "hora": "19:52:41",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "cor_depois": null,
+      "sequencia_antes": [
+        "V",
+        "P",
+        "V",
+        "P",
+        "V",
+        "V"
+      ],
+      "intervalo_desde_ultimo": 9,
+      "rodada_idx": 139
+    },
+    {
+      "id": 18,
+      "hora": "20:00:10",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": "P",
+      "sequencia_antes": [
+        "V",
+        "P"
+      ],
+      "intervalo_desde_ultimo": 2,
+      "rodada_idx": 142
+    },
+    {
+      "id": 19,
+      "hora": "20:16:43",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": "B",
+      "sequencia_antes": [
+        "V",
+        "P",
+        "P",
+        "V",
+        "V",
+        "P"
+      ],
+      "intervalo_desde_ultimo": 32,
+      "rodada_idx": 175
+    },
+    {
+      "id": 20,
+      "hora": "20:17:13",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "cor_depois": "V",
+      "sequencia_antes": [
+        "V",
+        "P",
+        "P",
+        "V",
+        "V",
+        "P"
+      ],
+      "intervalo_desde_ultimo": 0,
+      "rodada_idx": 176
+    },
+    {
+      "id": 21,
+      "hora": "20:25:14",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "cor_depois": null,
+      "sequencia_antes": [
+        "V",
+        "V",
+        "V",
+        "P",
+        "P",
+        "V"
+      ],
+      "intervalo_desde_ultimo": 15,
+      "rodada_idx": 192
+    }
+  ]
+}

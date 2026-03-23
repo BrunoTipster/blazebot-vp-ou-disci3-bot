@@ -1,0 +1,1068 @@
+{
+  "[[\"V\", \"P\", \"P\", \"V\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "P",
+      "V",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 4,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "14:24:26",
+    "last_seen": "15:49:08"
+  },
+  "[[\"V\", \"V\", \"P\", \"P\", \"V\", \"P\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "P",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 3,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "14:27:56",
+    "last_seen": "16:15:11"
+  },
+  "[[\"P\", \"V\", \"P\", \"P\", \"P\", \"V\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "P",
+      "P",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 4,
+    "losses": 2,
+    "consecutive_losses": 0,
+    "max_loss_streak": 2,
+    "first_seen": "14:30:56",
+    "last_seen": "19:18:36"
+  },
+  "[[\"V\", \"V\", \"P\", \"V\", \"P\", \"P\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "P",
+      "V",
+      "P",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 5,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "14:55:30",
+    "last_seen": "16:55:47"
+  },
+  "[[\"P\", \"V\", \"V\", \"V\", \"P\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "V",
+      "V",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 5,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "14:59:01",
+    "last_seen": "17:49:55"
+  },
+  "[[\"P\", \"V\", \"P\", \"P\", \"V\", \"V\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "P",
+      "V",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 3,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "15:18:04",
+    "last_seen": "17:04:48"
+  },
+  "[[\"P\", \"V\", \"V\", \"P\", \"V\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "V",
+      "P",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 3,
+    "losses": 3,
+    "consecutive_losses": 1,
+    "max_loss_streak": 2,
+    "first_seen": "15:19:05",
+    "last_seen": "16:58:17"
+  },
+  "[[\"P\", \"P\", \"V\", \"V\", \"P\", \"V\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "V",
+      "V",
+      "P",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 2,
+    "losses": 2,
+    "consecutive_losses": 1,
+    "max_loss_streak": 1,
+    "first_seen": "15:19:05",
+    "last_seen": "16:58:17"
+  },
+  "[[\"P\", \"V\", \"P\", \"P\", \"V\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "P",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 7,
+    "losses": 1,
+    "consecutive_losses": 0,
+    "max_loss_streak": 1,
+    "first_seen": "15:23:05",
+    "last_seen": "19:16:05"
+  },
+  "[[\"P\", \"P\", \"V\", \"P\", \"P\", \"V\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "V",
+      "P",
+      "P",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 3,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "15:23:05",
+    "last_seen": "19:11:35"
+  },
+  "[[\"P\", \"P\", \"V\", \"P\", \"V\", \"V\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "V",
+      "P",
+      "V",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 2,
+    "losses": 1,
+    "consecutive_losses": 1,
+    "max_loss_streak": 1,
+    "first_seen": "15:24:35",
+    "last_seen": "17:08:50"
+  },
+  "[[\"V\", \"P\", \"P\", \"P\", \"P\", \"P\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "P",
+      "P",
+      "P",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 3,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "15:37:06",
+    "last_seen": "16:09:11"
+  },
+  "[[\"V\", \"V\", \"P\", \"P\", \"P\", \"V\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "P",
+      "P",
+      "P",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 2,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "15:52:38",
+    "last_seen": "16:00:10"
+  },
+  "[[\"V\", \"P\", \"P\", \"P\", \"V\", \"V\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "P",
+      "P",
+      "V",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 3,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:00:39",
+    "last_seen": "16:57:17"
+  },
+  "[[\"V\", \"V\", \"V\", \"P\", \"V\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "V",
+      "P",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 3,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:06:11",
+    "last_seen": "16:37:14"
+  },
+  "[[\"P\", \"V\", \"V\", \"V\", \"P\", \"V\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "V",
+      "V",
+      "P",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:06:11",
+    "last_seen": "16:06:11"
+  },
+  "[[\"V\", \"P\", \"V\", \"P\", \"P\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "V",
+      "P",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 4,
+    "losses": 2,
+    "consecutive_losses": 2,
+    "max_loss_streak": 2,
+    "first_seen": "16:07:11",
+    "last_seen": "19:14:35"
+  },
+  "[[\"V\", \"P\", \"V\", \"P\", \"P\", \"P\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "V",
+      "P",
+      "P",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 1,
+    "losses": 2,
+    "consecutive_losses": 2,
+    "max_loss_streak": 2,
+    "first_seen": "16:08:11",
+    "last_seen": "16:56:17"
+  },
+  "[[\"P\", \"V\", \"P\", \"P\", \"P\", \"P\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "P",
+      "P",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:08:41",
+    "last_seen": "16:08:41"
+  },
+  "[[\"P\", \"V\", \"V\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "V",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 3,
+    "losses": 1,
+    "consecutive_losses": 0,
+    "max_loss_streak": 1,
+    "first_seen": "16:11:42",
+    "last_seen": "17:09:49"
+  },
+  "[[\"P\", \"P\", \"V\", \"V\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "V",
+      "V",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 2,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:11:42",
+    "last_seen": "16:25:12"
+  },
+  "[[\"P\", \"V\", \"V\", \"V\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "V",
+      "V",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 3,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:12:11",
+    "last_seen": "16:26:13"
+  },
+  "[[\"V\", \"V\", \"V\", \"V\", \"P\", \"P\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "V",
+      "V",
+      "P",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:14:11",
+    "last_seen": "16:14:11"
+  },
+  "[[\"V\", \"P\", \"P\", \"V\", \"P\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 4,
+    "losses": 2,
+    "consecutive_losses": 1,
+    "max_loss_streak": 1,
+    "first_seen": "16:15:11",
+    "last_seen": "19:16:36"
+  },
+  "[[\"P\", \"V\", \"P\", \"V\", \"P\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 5,
+    "losses": 2,
+    "consecutive_losses": 2,
+    "max_loss_streak": 2,
+    "first_seen": "16:16:12",
+    "last_seen": "19:14:05"
+  },
+  "[[\"P\", \"P\", \"V\", \"P\", \"V\", \"P\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "V",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 2,
+    "consecutive_losses": 2,
+    "max_loss_streak": 2,
+    "first_seen": "16:16:12",
+    "last_seen": "19:14:05"
+  },
+  "[[\"P\", \"V\", \"P\", \"V\", \"P\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "V",
+      "P",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 3,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:19:43",
+    "last_seen": "17:48:25"
+  },
+  "[[\"V\", \"V\", \"P\", \"P\", \"P\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "P",
+      "P",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 2,
+    "losses": 1,
+    "consecutive_losses": 1,
+    "max_loss_streak": 1,
+    "first_seen": "16:22:43",
+    "last_seen": "17:50:55"
+  },
+  "[[\"V\", \"V\", \"V\", \"P\", \"P\", \"P\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "V",
+      "P",
+      "P",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 1,
+    "losses": 1,
+    "consecutive_losses": 1,
+    "max_loss_streak": 1,
+    "first_seen": "16:22:43",
+    "last_seen": "17:50:55"
+  },
+  "[[\"P\", \"P\", \"P\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "P",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 2,
+    "consecutive_losses": 2,
+    "max_loss_streak": 2,
+    "first_seen": "16:24:12",
+    "last_seen": "16:57:17"
+  },
+  "[[\"P\", \"P\", \"V\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "V",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:24:43",
+    "last_seen": "16:24:43"
+  },
+  "[[\"P\", \"P\", \"P\", \"V\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "P",
+      "V",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:24:43",
+    "last_seen": "16:24:43"
+  },
+  "[[\"V\", \"V\", \"V\", \"V\", \"P\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "V",
+      "V",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 3,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:27:43",
+    "last_seen": "16:36:45"
+  },
+  "[[\"V\", \"V\", \"V\", \"V\", \"V\", \"P\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "V",
+      "V",
+      "V",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:27:43",
+    "last_seen": "16:27:43"
+  },
+  "[[\"V\", \"P\", \"V\", \"V\", \"P\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "V",
+      "V",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 3,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:30:14",
+    "last_seen": "16:41:44"
+  },
+  "[[\"P\", \"V\", \"P\", \"V\", \"V\", \"P\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "V",
+      "V",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 2,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:30:14",
+    "last_seen": "16:33:43"
+  },
+  "[[\"P\", \"V\", \"V\", \"P\", \"V\", \"P\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "V",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 1,
+    "consecutive_losses": 1,
+    "max_loss_streak": 1,
+    "first_seen": "16:31:14",
+    "last_seen": "16:55:17"
+  },
+  "[[\"V\", \"P\", \"V\", \"P\", \"V\", \"P\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "V",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:32:14",
+    "last_seen": "16:32:14"
+  },
+  "[[\"P\", \"V\", \"V\", \"P\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "V",
+      "P",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 3,
+    "losses": 1,
+    "consecutive_losses": 0,
+    "max_loss_streak": 1,
+    "first_seen": "16:34:14",
+    "last_seen": "16:58:17"
+  },
+  "[[\"V\", \"P\", \"V\", \"V\", \"P\", \"V\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "V",
+      "V",
+      "P",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:34:14",
+    "last_seen": "16:34:14"
+  },
+  "[[\"V\", \"V\", \"P\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "P",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 2,
+    "consecutive_losses": 2,
+    "max_loss_streak": 2,
+    "first_seen": "16:34:44",
+    "last_seen": "16:58:48"
+  },
+  "[[\"P\", \"V\", \"V\", \"P\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "V",
+      "P",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 2,
+    "consecutive_losses": 2,
+    "max_loss_streak": 2,
+    "first_seen": "16:34:44",
+    "last_seen": "16:58:48"
+  },
+  "[[\"V\", \"P\", \"V\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "V",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 2,
+    "losses": 1,
+    "consecutive_losses": 1,
+    "max_loss_streak": 1,
+    "first_seen": "16:35:14",
+    "last_seen": "17:49:24"
+  },
+  "[[\"V\", \"V\", \"P\", \"V\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "P",
+      "V",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:35:14",
+    "last_seen": "16:35:14"
+  },
+  "[[\"P\", \"V\", \"V\", \"V\", \"V\", \"P\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "V",
+      "V",
+      "V",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 2,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:36:14",
+    "last_seen": "16:36:45"
+  },
+  "[[\"P\", \"V\", \"P\", \"P\", \"P\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "P",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 4,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:38:45",
+    "last_seen": "19:18:06"
+  },
+  "[[\"V\", \"P\", \"V\", \"P\", \"P\", \"P\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "V",
+      "P",
+      "P",
+      "P"
+    ],
+    "prediction": "V",
+    "wins": 2,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:38:45",
+    "last_seen": "16:56:17"
+  },
+  "[[\"P\", \"V\", \"P\", \"P\", \"P\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "P",
+      "P",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 2,
+    "losses": 1,
+    "consecutive_losses": 1,
+    "max_loss_streak": 1,
+    "first_seen": "16:39:14",
+    "last_seen": "19:18:36"
+  },
+  "[[\"P\", \"P\", \"V\", \"V\", \"P\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "V",
+      "V",
+      "P",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 2,
+    "losses": 1,
+    "consecutive_losses": 0,
+    "max_loss_streak": 1,
+    "first_seen": "16:40:45",
+    "last_seen": "16:58:17"
+  },
+  "[[\"V\", \"V\", \"P\", \"V\", \"P\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "V",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:55:17",
+    "last_seen": "16:55:17"
+  },
+  "[[\"P\", \"V\", \"V\", \"P\", \"V\", \"P\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "V",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "16:55:17",
+    "last_seen": "16:55:17"
+  },
+  "[[\"V\", \"P\", \"P\", \"V\", \"V\", \"P\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "P",
+      "V",
+      "V",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "17:05:19",
+    "last_seen": "17:05:19"
+  },
+  "[[\"P\", \"V\", \"V\", \"P\", \"P\", \"P\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "V",
+      "P",
+      "P",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "17:06:19",
+    "last_seen": "17:06:19"
+  },
+  "[[\"P\", \"P\", \"P\", \"P\", \"V\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "P",
+      "P",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 3,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "17:07:19",
+    "last_seen": "19:07:34"
+  },
+  "[[\"V\", \"P\", \"P\", \"P\", \"P\", \"V\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "P",
+      "P",
+      "P",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "17:07:19",
+    "last_seen": "17:07:19"
+  },
+  "[[\"P\", \"V\", \"P\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 2,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "17:08:50",
+    "last_seen": "17:48:54"
+  },
+  "[[\"P\", \"P\", \"V\", \"P\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "V",
+      "P",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "17:08:50",
+    "last_seen": "17:08:50"
+  },
+  "[[\"P\", \"V\", \"P\", \"V\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "V",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 1,
+    "consecutive_losses": 1,
+    "max_loss_streak": 1,
+    "first_seen": "17:09:20",
+    "last_seen": "17:49:24"
+  },
+  "[[\"V\", \"P\", \"V\", \"V\", \"V\", \"V\"], \"V\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "V",
+      "V",
+      "V",
+      "V"
+    ],
+    "prediction": "V",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "17:09:49",
+    "last_seen": "17:09:49"
+  },
+  "[[\"P\", \"P\", \"P\", \"P\", \"P\", \"V\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "P",
+      "P",
+      "P",
+      "V"
+    ],
+    "prediction": "P",
+    "wins": 2,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "19:07:04",
+    "last_seen": "19:07:34"
+  },
+  "[[\"P\", \"V\", \"P\", \"V\", \"P\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 2,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "19:09:04",
+    "last_seen": "19:14:05"
+  },
+  "[[\"P\", \"V\", \"P\", \"P\", \"V\", \"P\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "V",
+      "P",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 1,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "19:16:36",
+    "last_seen": "19:16:36"
+  },
+  "[[\"P\", \"P\", \"P\", \"V\", \"P\"], \"P\"]": {
+    "pattern": [
+      "P",
+      "P",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 2,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "19:19:05",
+    "last_seen": "19:19:36"
+  },
+  "[[\"V\", \"P\", \"P\", \"P\", \"V\", \"P\"], \"P\"]": {
+    "pattern": [
+      "V",
+      "P",
+      "P",
+      "P",
+      "V",
+      "P"
+    ],
+    "prediction": "P",
+    "wins": 2,
+    "losses": 0,
+    "consecutive_losses": 0,
+    "max_loss_streak": 0,
+    "first_seen": "19:19:05",
+    "last_seen": "19:19:36"
+  }
+}

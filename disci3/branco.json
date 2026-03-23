@@ -1,0 +1,1423 @@
+{
+  "padroes": [
+    {
+      "janela": 2,
+      "formula": "soma_mod3",
+      "condicao": "==0",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            11,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "soma_meio",
+      "condicao": "==0",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            11,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "and_todos",
+      "condicao": "==0",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            11,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "and_mod14",
+      "condicao": "==0",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            11,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "zeros_na_janela",
+      "condicao": "==0",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            11,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "posicao_max",
+      "condicao": "==0",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            11,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "posicao_min",
+      "condicao": "==1",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            11,
+            4
+          ],
+          "resultado": 1.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 1.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 1.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 1.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 1.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "qtd_distintos",
+      "condicao": "==2",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            11,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "iguais",
+      "condicao": "==0",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            11,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 3,
+      "formula": "and_todos",
+      "condicao": "==0",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            7,
+            11,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            11,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 3,
+      "formula": "and_mod14",
+      "condicao": "==0",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            7,
+            11,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            11,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 3,
+      "formula": "zeros_na_janela",
+      "condicao": "==0",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            7,
+            11,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            11,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 3,
+      "formula": "posicao_min",
+      "condicao": "==2",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            7,
+            11,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            11,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        }
+      ]
+    },
+    {
+      "janela": 3,
+      "formula": "iguais",
+      "condicao": "==0",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            7,
+            11,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            11,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 3,
+      "formula": "desvio_medio_abs_round",
+      "condicao": "==2",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            7,
+            11,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            11,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        }
+      ]
+    },
+    {
+      "janela": 3,
+      "formula": "desvio_medio_abs_mod14",
+      "condicao": "==2",
+      "acertos": 499,
+      "total": 499,
+      "taxa": 1.0,
+      "taxa_pct": "100.0%",
+      "exemplos": [
+        {
+          "nums": [
+            7,
+            11,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            11,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            7,
+            8,
+            4
+          ],
+          "resultado": 2.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "soma",
+      "condicao": "==12",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 12.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 12.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 12.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 12.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 12.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "soma_mod14",
+      "condicao": "==12",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 12.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 12.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 12.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 12.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 12.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "soma_mod7",
+      "condicao": "==5",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 5.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 5.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 5.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 5.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 5.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "soma_mod6",
+      "condicao": "==0",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "soma_mod5",
+      "condicao": "==2",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "soma_mod2",
+      "condicao": "==0",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 0.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "media_round",
+      "condicao": "==6",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "media_floor",
+      "condicao": "==6",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "media_ceil",
+      "condicao": "==6",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "media_mod14",
+      "condicao": "==6",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 6.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "max_minus_min",
+      "condicao": "==4",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "primeiro_menos_ultimo",
+      "condicao": "==4",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "abs_diferenca",
+      "condicao": "==4",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 4.0
+        }
+      ]
+    },
+    {
+      "janela": 2,
+      "formula": "diff_max_media",
+      "condicao": "==2",
+      "acertos": 498,
+      "total": 499,
+      "taxa": 0.998,
+      "taxa_pct": "99.8%",
+      "exemplos": [
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        },
+        {
+          "nums": [
+            8,
+            4
+          ],
+          "resultado": 2.0
+        }
+      ]
+    }
+  ],
+  "alertas_emitidos": 0,
+  "brancos_previstos": 0,
+  "brancos_total": 500,
+  "ultima_atualizacao": "2026-03-22 16:06:10"
+}

@@ -1,0 +1,90 @@
+
+2. 🔵 Substituição Cíclica — Minerador em Tempo Real
+Os padrões descobertos ao vivo (em memória, não em arquivo) são completamente substituídos a cada 5 rodadas:
+
+Analisa as últimas 300 rodadas
+Recalcula tudo do zero
+Mantém apenas os top 40 com WR ≥ 78% e ≥ 6 ocorrências
+Padrões que caem fora do top 40 somem da memória naquele ciclo
+
+Esses padrões RT não são salvos em arquivo — existem só enquanto o bot está rodando.
+
+
+
+
+
+
+
+
+Pega as últimas 300 rodadas VP do histórico ao vivo
+Varre todas as sequências de 5 e 6 cores nessa janela
+Calcula o WR de cada sequência no momento atual
+Compara as últimas 5 ou 6 cores do buffer com as estatísticas calculadas
+Se achar sequência com WR ≥ 78% e ≥ 6 ocorrências → gera o sinal na hora
+
+🔴 AO VIVO  84% agora
+🎯 ENTRAR: ⚫ PRETO
+📈 WR agora: 84% nas últimas rodadas
+Você quer: a cada rodada, verifica o buffer atual diretamente contra padrões com WR ≥ 78% e ≥ 6 ocorrências → se achar match → sinal na hora, sem esperar ciclo.
+
+A cada rodada nova:
+   ↓
+1. Pega as últimas 300 cores VP do buffer
+2. Calcula WR de todas as sequências de 5 e 6 cores
+3. Filtra: WR ≥ 78% E ≥ 6 ocorrências
+4. Ordena por WR (maior primeiro)
+5. Verifica se o buffer ATUAL termina com algum desses padrões
+   + confirmação do par vivo (VV ou PP)
+6. Encontrou? → sinal NA HORA ⚡ (fonte = "RT")
+7. Não encontrou? → verifica listas fixas A/B/C normalmente
+
+A QUE TEVE BASTANTE ACERTO
+Antes — o bot minerava a cada 30 minutos, salvava em 4 arquivos JSON no disco, depois recarregava do disco. Entre uma mineração e outra os padrões ficavam defasados do mercado real.
+Agora — a cada 5 rodadas o bot analisa as últimas 300 rodadas do buffer ao vivo diretamente na memória, sem tocar arquivo nenhum. Os padrões ficam em _rt_patterns e sobem direto para patterns_c (lista de maior prioridade). Só entram padrões com WR ≥ 78% e mínimo de 6 ocorrências no histórico recente.
+Quando o minerador RT encontra padrões novos que não estavam nos arquivos fixos, avisa no Telegram na hora com os top 3 padrões descobertos.
+Use /rtminer para ver quais padrões estão ativos ao vivo a qualquer momento.
+exige que as 2 últimas cores do histórico ao vivo também batem depois do padrão
+Esse é o fluxo completo. Resumindo o que está funcionando no código:
+Detecção — a cada 5 minutos analisa as últimas 30 cores VP do histórico ao vivo e classifica em um de 4 tipos: V domina (V ≥ 60%), P domina (P ≥ 60%), Alternando (trocas ≥ 65%) ou Neutro (nenhum critério atingido).
+Classificação dos padrões minerados:
+
+Tendência V + predição V → FAVOR
+Tendência V + predição P → CONTRA
+Tendência P + predição P → FAVOR
+Tendência P + predição V → CONTRA
+Alternando + predição oposta à última cor do padrão → FAVOR
+Alternando + predição igual à última → CONTRA
+Neutro → NEUTRO (vai junto com o grupo ativo)
+
+Decisão — calcula o WR médio do grupo FAVOR e do grupo CONTRA. O que tiver maior WR médio é copiado para os arquivos A/B/C. A lista D sempre recebe todos sem filtro (backup). Os arquivos antigos são apagados e reescritos — não acumulam.
+Um ponto de atenção: o WR médio aqui é calculado sobre os dados históricos do minerador, não sobre resultados reais do bot. Ou seja, é o WR que o padrão teve no histórico coletado da API — não necessariamente o WR real nas apostas ao vivo. Quer que eu adicione também o WR real registrado no pattern_records como critério de desempate?AUMENTA PARA 10 MINUTOS MINERACAO INVES DE 5 EM 517:29Rápido:Executou 2 comandos, editou um arquivo, leu um arquivoExecutou 2 comandos, editou um arquivo, leu um arquivoFeito. Todas as 8 referências ao intervalo usam self.INTERVALO_ROTACAO_SEG, então todas atualizaram automaticamente — as mensagens do Telegram, o /minerador, o status_resumo, tudo vai mostrar "10 minutos" agora.Bot22 modificadoPY BaixarTEM COMO COLOCA COM INTREFAVE GRAFICA COM TODAS ESSAS SITUACOES PARA CONFIGURAR DO JEITO QUE EU QUISER17:42Executou 2 comandosExecutou 2 comandosTenho tudo. Agora vou criar a interface gráfica completa:Executou 2 comandos, leu um arquivoExecutou 2 comandos, leu um arquivoCria a interface HTML completa de configuraçãoScriptCopia para outputsScriptPresented fileConcluídoPronto! A interface tem 5 abas:
+🔄 Minerador — intervalo de rotação, páginas da API, 3 níveis com ocorrências/WR/label, limiares de tendência (dominância/alternância), minerador RT completo
+🎯 Sinais & Filtros — janela de sinais, bloqueio pós-loss, cold-start, losses consecutivos, consenso de listas, EV mínimo, filtros de hora, double confirmation, Markov, entropia, bias pós-branco
+💰 Banca & Gale — gale máximo V/P, win streak cooldown, % por tipo de resultado (direto/gale1)
+🌊 Regime & Score — janela do regime, confiança mínima, score inicial/teto/floor/passo, motor autônomo
+🤖 AutoLearner — rodadas mínimas e acurácia por lista (A/B/C/D), critérios gerais
+Na aba 📋 Preview você clica em "Atualizar preview", vê todas as constantes geradas em Python e pode baixar como blazebot_config.py ou copiar direto. Aí é só colar no topo do bot22_modificado.py substituindo os valores originais.Config uiCódigo · HTML BaixarESTA DE SACANAGEM E PYTHON NÃO E HTML17:47Tem razão! Vou fazer em Python com tkinter — roda direto sem navegador:Executou 3 comandosExecutou 3 comandostkinter não está disponível no servidor, mas vai estar na máquina que você vai rodar. Vou fazer o arquivo .py completo usando tkinter puro — você roda na sua máquina normalmente com python config_ui.py:Executou 2 comandos, leu um arquivoExecutou 2 comandos, leu um arquivoCria o configurador Python completo com tkinterScriptValida sintaxe e copiaScriptPresented fileConcluídoPronto! Para usar:
+bashpython config_ui.py
+O que tem na interface:
+
+5 abas — Minerador / Sinais & Filtros / Banca & Gale / Regime & Score / AutoLearner
+Sliders com valor ao vivo em vermelho para todos os parâmetros numéricos
+Checkboxes para os toggles (ativar/desativar filtros)
+Campos de texto para os labels dos níveis
+Aba Preview — mostra o bloco Python gerado, botão de salvar como blazebot_config.py e botão de copiar
+Salvar sessão — grava blazebot_ui_config.json e recarrega na próxima vez que abrir
+Resetar tudo — volta para os valores padrão
+
+
+
+
+
+
+... P V P V V | V V   ← sinal liberado ✅
+    ↑ padrão  ↑ par vivo VV
+
+... P V P V V | P P   ← sinal liberado ✅
+    ↑ padrão  ↑ par vivo PP
+
+... P V P V V | V P   ← bloqueado ❌
+... P V P V V | P V   ← bloqueado ❌uiPY Baixar Sonnet 4.6

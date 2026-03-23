@@ -1,0 +1,2190 @@
+{
+  "[[\"P\", \"P\", \"P\", \"P\", \"P\", \"P\"], \"V\"]": {
+    "pat": "PPPPPP",
+    "pred": "V",
+    "acc": 94.4,
+    "wins": 17,
+    "losses": 1,
+    "hist_count": 33,
+    "sucessores": [
+      {
+        "pat": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VPVVV",
+        "tam": 5,
+        "count": 3,
+        "pct": 9.1,
+        "pred": "P",
+        "acc": 85.7,
+        "wins": 6,
+        "losses": 1,
+        "streak_win": 2,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.857,
+        "wins_banco": 6,
+        "losses_banco": 1,
+        "pct_aparece": 9.1,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "P",
+          "V",
+          "P"
+        ],
+        "pat_str": "PVPVP",
+        "tam": 5,
+        "count": 3,
+        "pct": 9.1,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "V",
+          "P",
+          "V",
+          "P"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 9.1,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "P",
+          "P",
+          "V"
+        ],
+        "pat_str": "VVPPV",
+        "tam": 5,
+        "count": 2,
+        "pct": 6.1,
+        "pred": "V",
+        "acc": 84.6,
+        "wins": 11,
+        "losses": 2,
+        "streak_win": 0,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "P",
+          "P",
+          "V"
+        ],
+        "wr_banco": 0.846,
+        "wins_banco": 11,
+        "losses_banco": 2,
+        "pct_aparece": 6.1,
+        "freq_hist": 2
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "P",
+          "P",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVPPVV",
+        "tam": 6,
+        "count": 2,
+        "pct": 6.1,
+        "pred": "V",
+        "acc": 66.7,
+        "wins": 8,
+        "losses": 4,
+        "streak_win": 0,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "P",
+          "P",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 8,
+        "losses_banco": 4,
+        "pct_aparece": 6.1,
+        "freq_hist": 2
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "P",
+          "V"
+        ],
+        "pat_str": "VVVPV",
+        "tam": 5,
+        "count": 2,
+        "pct": 6.1,
+        "pred": "V",
+        "acc": 100.0,
+        "wins": 6,
+        "losses": 0,
+        "streak_win": 6,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "P",
+          "V"
+        ],
+        "wr_banco": 1.0,
+        "wins_banco": 6,
+        "losses_banco": 0,
+        "pct_aparece": 6.1,
+        "freq_hist": 2
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "V",
+          "P",
+          "P"
+        ],
+        "pat_str": "PVVPP",
+        "tam": 5,
+        "count": 2,
+        "pct": 6.1,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "V",
+          "V",
+          "P",
+          "P"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 6.1,
+        "freq_hist": 2
+      }
+    ]
+  },
+  "[[\"P\", \"P\", \"P\", \"P\", \"V\", \"P\"], \"P\"]": {
+    "pat": "PPPPVP",
+    "pred": "P",
+    "acc": 90.0,
+    "wins": 18,
+    "losses": 2,
+    "hist_count": 30,
+    "sucessores": [
+      {
+        "pat": [
+          "P",
+          "V",
+          "P",
+          "V",
+          "P"
+        ],
+        "pat_str": "PVPVP",
+        "tam": 5,
+        "count": 4,
+        "pct": 13.3,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "V",
+          "P",
+          "V",
+          "P"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 13.3,
+        "freq_hist": 4
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "PVVVP",
+        "tam": 5,
+        "count": 3,
+        "pct": 10.0,
+        "pred": "V",
+        "acc": 90.0,
+        "wins": 9,
+        "losses": 1,
+        "streak_win": 0,
+        "tem_banco": true,
+        "seq": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": 0.9,
+        "wins_banco": 9,
+        "losses_banco": 1,
+        "pct_aparece": 10.0,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "P",
+          "P"
+        ],
+        "pat_str": "PVVVPP",
+        "tam": 6,
+        "count": 3,
+        "pct": 10.0,
+        "pred": "P",
+        "acc": 87.0,
+        "wins": 20,
+        "losses": 3,
+        "streak_win": 0,
+        "tem_banco": true,
+        "seq": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "P",
+          "P"
+        ],
+        "wr_banco": 0.87,
+        "wins_banco": 20,
+        "losses_banco": 3,
+        "pct_aparece": 10.0,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVV",
+        "tam": 5,
+        "count": 3,
+        "pct": 10.0,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 8,
+        "losses": 4,
+        "streak_win": 1,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 8,
+        "losses_banco": 4,
+        "pct_aparece": 10.0,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "VVVVVP",
+        "tam": 6,
+        "count": 3,
+        "pct": 10.0,
+        "pred": "V",
+        "acc": 88.2,
+        "wins": 15,
+        "losses": 2,
+        "streak_win": 3,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": 0.882,
+        "wins_banco": 15,
+        "losses_banco": 2,
+        "pct_aparece": 10.0,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "P",
+          "V",
+          "V"
+        ],
+        "pat_str": "PVPVV",
+        "tam": 5,
+        "count": 2,
+        "pct": 6.7,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "V",
+          "P",
+          "V",
+          "V"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 6.7,
+        "freq_hist": 2
+      }
+    ]
+  },
+  "[[\"P\", \"V\", \"V\", \"V\", \"P\"], \"V\"]": {
+    "pat": "PVVVP",
+    "pred": "V",
+    "acc": 90.0,
+    "wins": 9,
+    "losses": 1,
+    "hist_count": 120,
+    "sucessores": [
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVV",
+        "tam": 5,
+        "count": 16,
+        "pct": 13.3,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 8,
+        "losses": 4,
+        "streak_win": 1,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 8,
+        "losses_banco": 4,
+        "pct_aparece": 13.3,
+        "freq_hist": 16
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVVV",
+        "tam": 6,
+        "count": 12,
+        "pct": 10.0,
+        "pred": "P",
+        "acc": 80.0,
+        "wins": 12,
+        "losses": 3,
+        "streak_win": 4,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.8,
+        "wins_banco": 12,
+        "losses_banco": 3,
+        "pct_aparece": 10.0,
+        "freq_hist": 12
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "P",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVPVV",
+        "tam": 5,
+        "count": 8,
+        "pct": 6.7,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "V",
+          "V",
+          "P",
+          "V",
+          "V"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 6.7,
+        "freq_hist": 8
+      },
+      {
+        "pat": [
+          "P",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "PPVVV",
+        "tam": 5,
+        "count": 7,
+        "pct": 5.8,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 5.8,
+        "freq_hist": 7
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "P",
+          "P"
+        ],
+        "pat_str": "VVVPP",
+        "tam": 5,
+        "count": 7,
+        "pct": 5.8,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "P",
+          "P"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 5.8,
+        "freq_hist": 7
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "VVVVP",
+        "tam": 5,
+        "count": 7,
+        "pct": 5.8,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 4,
+        "losses": 2,
+        "streak_win": 3,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 4,
+        "losses_banco": 2,
+        "pct_aparece": 5.8,
+        "freq_hist": 7
+      }
+    ]
+  },
+  "[[\"P\", \"V\", \"P\", \"P\", \"V\", \"V\"], \"P\"]": {
+    "pat": "PVPPVV",
+    "pred": "P",
+    "acc": 91.7,
+    "wins": 11,
+    "losses": 1,
+    "hist_count": 48,
+    "sucessores": [
+      {
+        "pat": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VPVVV",
+        "tam": 5,
+        "count": 6,
+        "pct": 12.5,
+        "pred": "P",
+        "acc": 85.7,
+        "wins": 6,
+        "losses": 1,
+        "streak_win": 2,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.857,
+        "wins_banco": 6,
+        "losses_banco": 1,
+        "pct_aparece": 12.5,
+        "freq_hist": 6
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "VVVVP",
+        "tam": 5,
+        "count": 4,
+        "pct": 8.3,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 4,
+        "losses": 2,
+        "streak_win": 3,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 4,
+        "losses_banco": 2,
+        "pct_aparece": 8.3,
+        "freq_hist": 4
+      },
+      {
+        "pat": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "VPVVVP",
+        "tam": 6,
+        "count": 4,
+        "pct": 8.3,
+        "pred": "P",
+        "acc": 88.5,
+        "wins": 23,
+        "losses": 3,
+        "streak_win": 0,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": 0.885,
+        "wins_banco": 23,
+        "losses_banco": 3,
+        "pct_aparece": 8.3,
+        "freq_hist": 4
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVV",
+        "tam": 5,
+        "count": 3,
+        "pct": 6.2,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 8,
+        "losses": 4,
+        "streak_win": 1,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 8,
+        "losses_banco": 4,
+        "pct_aparece": 6.2,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVVV",
+        "tam": 6,
+        "count": 3,
+        "pct": 6.2,
+        "pred": "P",
+        "acc": 80.0,
+        "wins": 12,
+        "losses": 3,
+        "streak_win": 4,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.8,
+        "wins_banco": 12,
+        "losses_banco": 3,
+        "pct_aparece": 6.2,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "VPVVP",
+        "tam": 5,
+        "count": 3,
+        "pct": 6.2,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 6.2,
+        "freq_hist": 3
+      }
+    ]
+  },
+  "[[\"P\", \"P\", \"P\", \"P\", \"P\", \"V\"], \"P\"]": {
+    "pat": "PPPPPV",
+    "pred": "P",
+    "acc": 90.7,
+    "wins": 39,
+    "losses": 4,
+    "hist_count": 37,
+    "sucessores": [
+      {
+        "pat": [
+          "P",
+          "P",
+          "V",
+          "P",
+          "V"
+        ],
+        "pat_str": "PPVPV",
+        "tam": 5,
+        "count": 5,
+        "pct": 13.5,
+        "pred": "P",
+        "acc": 100.0,
+        "wins": 6,
+        "losses": 0,
+        "streak_win": 6,
+        "tem_banco": true,
+        "seq": [
+          "P",
+          "P",
+          "V",
+          "P",
+          "V"
+        ],
+        "wr_banco": 1.0,
+        "wins_banco": 6,
+        "losses_banco": 0,
+        "pct_aparece": 13.5,
+        "freq_hist": 5
+      },
+      {
+        "pat": [
+          "V",
+          "P",
+          "P",
+          "V",
+          "V"
+        ],
+        "pat_str": "VPPVV",
+        "tam": 5,
+        "count": 4,
+        "pct": 10.8,
+        "pred": "P",
+        "acc": 85.7,
+        "wins": 6,
+        "losses": 1,
+        "streak_win": 1,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "P",
+          "P",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.857,
+        "wins_banco": 6,
+        "losses_banco": 1,
+        "pct_aparece": 10.8,
+        "freq_hist": 4
+      },
+      {
+        "pat": [
+          "P",
+          "P",
+          "V",
+          "P",
+          "V",
+          "P"
+        ],
+        "pat_str": "PPVPVP",
+        "tam": 6,
+        "count": 3,
+        "pct": 8.1,
+        "pred": "V",
+        "acc": 87.5,
+        "wins": 14,
+        "losses": 2,
+        "streak_win": 0,
+        "tem_banco": true,
+        "seq": [
+          "P",
+          "P",
+          "V",
+          "P",
+          "V",
+          "P"
+        ],
+        "wr_banco": 0.875,
+        "wins_banco": 14,
+        "losses_banco": 2,
+        "pct_aparece": 8.1,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "P",
+          "V",
+          "V"
+        ],
+        "pat_str": "PVPVV",
+        "tam": 5,
+        "count": 3,
+        "pct": 8.1,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "V",
+          "P",
+          "V",
+          "V"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 8.1,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "P",
+          "P",
+          "P",
+          "P",
+          "P"
+        ],
+        "pat_str": "PPPPP",
+        "tam": 5,
+        "count": 3,
+        "pct": 8.1,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "P",
+          "P",
+          "P",
+          "P"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 8.1,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "PVVVV",
+        "tam": 5,
+        "count": 3,
+        "pct": 8.1,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 8.1,
+        "freq_hist": 3
+      }
+    ]
+  },
+  "[[\"V\", \"V\", \"P\", \"P\", \"P\", \"V\"], \"P\"]": {
+    "pat": "VVPPPV",
+    "pred": "P",
+    "acc": 93.9,
+    "wins": 31,
+    "losses": 2,
+    "hist_count": 54,
+    "sucessores": [
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVV",
+        "tam": 5,
+        "count": 6,
+        "pct": 11.1,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 8,
+        "losses": 4,
+        "streak_win": 1,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 8,
+        "losses_banco": 4,
+        "pct_aparece": 11.1,
+        "freq_hist": 6
+      },
+      {
+        "pat": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "VPVVP",
+        "tam": 5,
+        "count": 5,
+        "pct": 9.3,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 9.3,
+        "freq_hist": 5
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVVV",
+        "tam": 6,
+        "count": 5,
+        "pct": 9.3,
+        "pred": "P",
+        "acc": 80.0,
+        "wins": 12,
+        "losses": 3,
+        "streak_win": 4,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.8,
+        "wins_banco": 12,
+        "losses_banco": 3,
+        "pct_aparece": 9.3,
+        "freq_hist": 5
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "VVVVP",
+        "tam": 5,
+        "count": 4,
+        "pct": 7.4,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 4,
+        "losses": 2,
+        "streak_win": 3,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 4,
+        "losses_banco": 2,
+        "pct_aparece": 7.4,
+        "freq_hist": 4
+      },
+      {
+        "pat": [
+          "P",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "PPVVV",
+        "tam": 5,
+        "count": 3,
+        "pct": 5.6,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 5.6,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P",
+          "V"
+        ],
+        "pat_str": "VVVVPV",
+        "tam": 6,
+        "count": 3,
+        "pct": 5.6,
+        "pred": "P",
+        "acc": 86.1,
+        "wins": 31,
+        "losses": 5,
+        "streak_win": 2,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P",
+          "V"
+        ],
+        "wr_banco": 0.861,
+        "wins_banco": 31,
+        "losses_banco": 5,
+        "pct_aparece": 5.6,
+        "freq_hist": 3
+      }
+    ]
+  },
+  "[[\"V\", \"V\", \"P\", \"P\", \"P\", \"P\"], \"V\"]": {
+    "pat": "VVPPPP",
+    "pred": "V",
+    "acc": 100.0,
+    "wins": 15,
+    "losses": 0,
+    "hist_count": 38,
+    "sucessores": [
+      {
+        "pat": [
+          "P",
+          "P",
+          "P",
+          "V",
+          "P"
+        ],
+        "pat_str": "PPPVP",
+        "tam": 5,
+        "count": 3,
+        "pct": 7.9,
+        "pred": "V",
+        "acc": 100.0,
+        "wins": 8,
+        "losses": 0,
+        "streak_win": 8,
+        "tem_banco": true,
+        "seq": [
+          "P",
+          "P",
+          "P",
+          "V",
+          "P"
+        ],
+        "wr_banco": 1.0,
+        "wins_banco": 8,
+        "losses_banco": 0,
+        "pct_aparece": 7.9,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "P",
+          "P",
+          "V",
+          "P",
+          "V"
+        ],
+        "pat_str": "PPVPV",
+        "tam": 5,
+        "count": 3,
+        "pct": 7.9,
+        "pred": "P",
+        "acc": 100.0,
+        "wins": 6,
+        "losses": 0,
+        "streak_win": 6,
+        "tem_banco": true,
+        "seq": [
+          "P",
+          "P",
+          "V",
+          "P",
+          "V"
+        ],
+        "wr_banco": 1.0,
+        "wins_banco": 6,
+        "losses_banco": 0,
+        "pct_aparece": 7.9,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVV",
+        "tam": 5,
+        "count": 3,
+        "pct": 7.9,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 8,
+        "losses": 4,
+        "streak_win": 1,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 8,
+        "losses_banco": 4,
+        "pct_aparece": 7.9,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "P",
+          "P",
+          "V"
+        ],
+        "pat_str": "PVPPV",
+        "tam": 5,
+        "count": 3,
+        "pct": 7.9,
+        "pred": "V",
+        "acc": 100.0,
+        "wins": 8,
+        "losses": 0,
+        "streak_win": 8,
+        "tem_banco": true,
+        "seq": [
+          "P",
+          "V",
+          "P",
+          "P",
+          "V"
+        ],
+        "wr_banco": 1.0,
+        "wins_banco": 8,
+        "losses_banco": 0,
+        "pct_aparece": 7.9,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "V",
+          "P",
+          "P"
+        ],
+        "pat_str": "PVVPP",
+        "tam": 5,
+        "count": 2,
+        "pct": 5.3,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "V",
+          "V",
+          "P",
+          "P"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 5.3,
+        "freq_hist": 2
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "V",
+          "P",
+          "P",
+          "V"
+        ],
+        "pat_str": "PVVPPV",
+        "tam": 6,
+        "count": 2,
+        "pct": 5.3,
+        "pred": "V",
+        "acc": 83.3,
+        "wins": 5,
+        "losses": 1,
+        "streak_win": 0,
+        "tem_banco": true,
+        "seq": [
+          "P",
+          "V",
+          "V",
+          "P",
+          "P",
+          "V"
+        ],
+        "wr_banco": 0.833,
+        "wins_banco": 5,
+        "losses_banco": 1,
+        "pct_aparece": 5.3,
+        "freq_hist": 2
+      }
+    ]
+  },
+  "[[\"V\", \"V\", \"P\", \"V\", \"P\"], \"V\"]": {
+    "pat": "VVPVP",
+    "pred": "V",
+    "acc": 90.0,
+    "wins": 9,
+    "losses": 1,
+    "hist_count": 98,
+    "sucessores": [
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVV",
+        "tam": 5,
+        "count": 12,
+        "pct": 12.2,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 8,
+        "losses": 4,
+        "streak_win": 1,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 8,
+        "losses_banco": 4,
+        "pct_aparece": 12.2,
+        "freq_hist": 12
+      },
+      {
+        "pat": [
+          "P",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "PPVVV",
+        "tam": 5,
+        "count": 8,
+        "pct": 8.2,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 8.2,
+        "freq_hist": 8
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "PVVVV",
+        "tam": 5,
+        "count": 7,
+        "pct": 7.1,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 7.1,
+        "freq_hist": 7
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVVV",
+        "tam": 6,
+        "count": 7,
+        "pct": 7.1,
+        "pred": "P",
+        "acc": 80.0,
+        "wins": 12,
+        "losses": 3,
+        "streak_win": 4,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.8,
+        "wins_banco": 12,
+        "losses_banco": 3,
+        "pct_aparece": 7.1,
+        "freq_hist": 7
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "VVVVP",
+        "tam": 5,
+        "count": 7,
+        "pct": 7.1,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 4,
+        "losses": 2,
+        "streak_win": 3,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 4,
+        "losses_banco": 2,
+        "pct_aparece": 7.1,
+        "freq_hist": 7
+      },
+      {
+        "pat": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "VPVVP",
+        "tam": 5,
+        "count": 6,
+        "pct": 6.1,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 6.1,
+        "freq_hist": 6
+      }
+    ]
+  },
+  "[[\"V\", \"P\", \"V\", \"P\", \"V\"], \"V\"]": {
+    "pat": "VPVPV",
+    "pred": "V",
+    "acc": 90.0,
+    "wins": 9,
+    "losses": 1,
+    "hist_count": 106,
+    "sucessores": [
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVV",
+        "tam": 5,
+        "count": 13,
+        "pct": 12.3,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 8,
+        "losses": 4,
+        "streak_win": 1,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 8,
+        "losses_banco": 4,
+        "pct_aparece": 12.3,
+        "freq_hist": 13
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "P",
+          "V"
+        ],
+        "pat_str": "VVVPV",
+        "tam": 5,
+        "count": 7,
+        "pct": 6.6,
+        "pred": "V",
+        "acc": 100.0,
+        "wins": 6,
+        "losses": 0,
+        "streak_win": 6,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "P",
+          "V"
+        ],
+        "wr_banco": 1.0,
+        "wins_banco": 6,
+        "losses_banco": 0,
+        "pct_aparece": 6.6,
+        "freq_hist": 7
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVVV",
+        "tam": 6,
+        "count": 7,
+        "pct": 6.6,
+        "pred": "P",
+        "acc": 80.0,
+        "wins": 12,
+        "losses": 3,
+        "streak_win": 4,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.8,
+        "wins_banco": 12,
+        "losses_banco": 3,
+        "pct_aparece": 6.6,
+        "freq_hist": 7
+      },
+      {
+        "pat": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VPVVV",
+        "tam": 5,
+        "count": 7,
+        "pct": 6.6,
+        "pred": "P",
+        "acc": 85.7,
+        "wins": 6,
+        "losses": 1,
+        "streak_win": 2,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.857,
+        "wins_banco": 6,
+        "losses_banco": 1,
+        "pct_aparece": 6.6,
+        "freq_hist": 7
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "VVVVVP",
+        "tam": 6,
+        "count": 6,
+        "pct": 5.7,
+        "pred": "V",
+        "acc": 88.2,
+        "wins": 15,
+        "losses": 2,
+        "streak_win": 3,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": 0.882,
+        "wins_banco": 15,
+        "losses_banco": 2,
+        "pct_aparece": 5.7,
+        "freq_hist": 6
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "VVVVP",
+        "tam": 5,
+        "count": 6,
+        "pct": 5.7,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 4,
+        "losses": 2,
+        "streak_win": 3,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 4,
+        "losses_banco": 2,
+        "pct_aparece": 5.7,
+        "freq_hist": 6
+      }
+    ]
+  },
+  "[[\"V\", \"V\", \"P\", \"V\", \"P\", \"P\"], \"P\"]": {
+    "pat": "VVPVPP",
+    "pred": "P",
+    "acc": 90.3,
+    "wins": 28,
+    "losses": 3,
+    "hist_count": 44,
+    "sucessores": [
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVV",
+        "tam": 5,
+        "count": 5,
+        "pct": 11.4,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 8,
+        "losses": 4,
+        "streak_win": 1,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 8,
+        "losses_banco": 4,
+        "pct_aparece": 11.4,
+        "freq_hist": 5
+      },
+      {
+        "pat": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VPVVV",
+        "tam": 5,
+        "count": 5,
+        "pct": 11.4,
+        "pred": "P",
+        "acc": 85.7,
+        "wins": 6,
+        "losses": 1,
+        "streak_win": 2,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.857,
+        "wins_banco": 6,
+        "losses_banco": 1,
+        "pct_aparece": 11.4,
+        "freq_hist": 5
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "PVVVV",
+        "tam": 5,
+        "count": 4,
+        "pct": 9.1,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 9.1,
+        "freq_hist": 4
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "PVVVVV",
+        "tam": 6,
+        "count": 4,
+        "pct": 9.1,
+        "pred": "P",
+        "acc": 85.7,
+        "wins": 6,
+        "losses": 1,
+        "streak_win": 0,
+        "tem_banco": true,
+        "seq": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.857,
+        "wins_banco": 6,
+        "losses_banco": 1,
+        "pct_aparece": 9.1,
+        "freq_hist": 4
+      },
+      {
+        "pat": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "pat_str": "PVVVP",
+        "tam": 5,
+        "count": 4,
+        "pct": 9.1,
+        "pred": "V",
+        "acc": 90.0,
+        "wins": 9,
+        "losses": 1,
+        "streak_win": 0,
+        "tem_banco": true,
+        "seq": [
+          "P",
+          "V",
+          "V",
+          "V",
+          "P"
+        ],
+        "wr_banco": 0.9,
+        "wins_banco": 9,
+        "losses_banco": 1,
+        "pct_aparece": 9.1,
+        "freq_hist": 4
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVVV",
+        "tam": 6,
+        "count": 3,
+        "pct": 6.8,
+        "pred": "P",
+        "acc": 80.0,
+        "wins": 12,
+        "losses": 3,
+        "streak_win": 4,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.8,
+        "wins_banco": 12,
+        "losses_banco": 3,
+        "pct_aparece": 6.8,
+        "freq_hist": 3
+      }
+    ]
+  },
+  "[[\"V\", \"V\", \"P\", \"P\", \"V\", \"P\"], \"V\"]": {
+    "pat": "VVPPVP",
+    "pred": "V",
+    "acc": 90.9,
+    "wins": 10,
+    "losses": 1,
+    "hist_count": 58,
+    "sucessores": [
+      {
+        "pat": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VPVVV",
+        "tam": 5,
+        "count": 6,
+        "pct": 10.3,
+        "pred": "P",
+        "acc": 85.7,
+        "wins": 6,
+        "losses": 1,
+        "streak_win": 2,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.857,
+        "wins_banco": 6,
+        "losses_banco": 1,
+        "pct_aparece": 10.3,
+        "freq_hist": 6
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VVVVV",
+        "tam": 5,
+        "count": 5,
+        "pct": 8.6,
+        "pred": "P",
+        "acc": 66.7,
+        "wins": 8,
+        "losses": 4,
+        "streak_win": 1,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 8,
+        "losses_banco": 4,
+        "pct_aparece": 8.6,
+        "freq_hist": 5
+      },
+      {
+        "pat": [
+          "V",
+          "V",
+          "V",
+          "P",
+          "V"
+        ],
+        "pat_str": "VVVPV",
+        "tam": 5,
+        "count": 5,
+        "pct": 8.6,
+        "pred": "V",
+        "acc": 100.0,
+        "wins": 6,
+        "losses": 0,
+        "streak_win": 6,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "V",
+          "V",
+          "P",
+          "V"
+        ],
+        "wr_banco": 1.0,
+        "wins_banco": 6,
+        "losses_banco": 0,
+        "pct_aparece": 8.6,
+        "freq_hist": 5
+      },
+      {
+        "pat": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "pat_str": "VPVVVV",
+        "tam": 6,
+        "count": 4,
+        "pct": 6.9,
+        "pred": "V",
+        "acc": 66.7,
+        "wins": 8,
+        "losses": 4,
+        "streak_win": 6,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "P",
+          "V",
+          "V",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.667,
+        "wins_banco": 8,
+        "losses_banco": 4,
+        "pct_aparece": 6.9,
+        "freq_hist": 4
+      },
+      {
+        "pat": [
+          "V",
+          "P",
+          "P",
+          "V",
+          "V"
+        ],
+        "pat_str": "VPPVV",
+        "tam": 5,
+        "count": 3,
+        "pct": 5.2,
+        "pred": "P",
+        "acc": 85.7,
+        "wins": 6,
+        "losses": 1,
+        "streak_win": 1,
+        "tem_banco": true,
+        "seq": [
+          "V",
+          "P",
+          "P",
+          "V",
+          "V"
+        ],
+        "wr_banco": 0.857,
+        "wins_banco": 6,
+        "losses_banco": 1,
+        "pct_aparece": 5.2,
+        "freq_hist": 3
+      },
+      {
+        "pat": [
+          "P",
+          "P",
+          "P",
+          "P",
+          "V"
+        ],
+        "pat_str": "PPPPV",
+        "tam": 5,
+        "count": 3,
+        "pct": 5.2,
+        "pred": null,
+        "acc": null,
+        "wins": 0,
+        "losses": 0,
+        "streak_win": 0,
+        "tem_banco": false,
+        "seq": [
+          "P",
+          "P",
+          "P",
+          "P",
+          "V"
+        ],
+        "wr_banco": null,
+        "wins_banco": 0,
+        "losses_banco": 0,
+        "pct_aparece": 5.2,
+        "freq_hist": 3
+      }
+    ]
+  }
+}

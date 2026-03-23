@@ -1,0 +1,118 @@
+{
+  "historico": [
+    {
+      "hora": "16:07:41",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "intervalo": -1,
+      "rodada_idx": 4
+    },
+    {
+      "hora": "16:20:42",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "intervalo": 25,
+      "rodada_idx": 30
+    },
+    {
+      "hora": "16:26:13",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "intervalo": 10,
+      "rodada_idx": 41
+    },
+    {
+      "hora": "16:36:45",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "intervalo": 20,
+      "rodada_idx": 62
+    },
+    {
+      "hora": "17:04:48",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "intervalo": 2,
+      "rodada_idx": 65
+    },
+    {
+      "hora": "19:07:34",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "intervalo": 1,
+      "rodada_idx": 67
+    },
+    {
+      "hora": "19:12:34",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "intervalo": 9,
+      "rodada_idx": 77
+    },
+    {
+      "hora": "19:13:05",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "B",
+      "intervalo": 0,
+      "rodada_idx": 78
+    },
+    {
+      "hora": "19:15:36",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "intervalo": 4,
+      "rodada_idx": 83
+    },
+    {
+      "hora": "19:16:05",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "B",
+      "intervalo": 0,
+      "rodada_idx": 84
+    },
+    {
+      "hora": "19:18:06",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "V",
+      "intervalo": 3,
+      "rodada_idx": 88
+    },
+    {
+      "hora": "19:19:36",
+      "data": "22/03/2026",
+      "numero": 0,
+      "cor_antes": "P",
+      "intervalo": 2,
+      "rodada_idx": 91
+    }
+  ],
+  "rodadas_total": 91,
+  "ultima_rodada_branco": 91,
+  "ultima_atualizacao": "2026-03-22 19:19:36",
+  "estatisticas": {
+    "total_brancos": 12,
+    "seco_atual": -1,
+    "max_seco": 25,
+    "min_seco": 1,
+    "media_intervalo": 8.4,
+    "antes_V": 5,
+    "antes_P": 5,
+    "hora_mais_comum": "19",
+    "distribuicao_hora": {
+      "16": 4,
+      "17": 1,
+      "19": 7
+    }
+  }
+}

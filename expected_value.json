@@ -1,0 +1,26 @@
+{
+  "historico": [
+    {
+      "hora": "15:08:08",
+      "pattern": "JAVOLATES",
+      "wins": 3,
+      "total": 3,
+      "p_win": 1.0,
+      "payout": 2.0,
+      "ev": 1.0,
+      "ev_pct": 100.0,
+      "positivo": true
+    },
+    {
+      "hora": "16:32:19",
+      "pattern": "CORODODOR",
+      "wins": 3,
+      "total": 3,
+      "p_win": 1.0,
+      "payout": 2.0,
+      "ev": 1.0,
+      "ev_pct": 100.0,
+      "positivo": true
+    }
+  ]
+}
