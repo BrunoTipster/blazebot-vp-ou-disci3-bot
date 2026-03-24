@@ -35,6 +35,14 @@ except ImportError:
     _NUMERO_STATS_DISPONIVEL = False
     logging.getLogger("BlazeBotVP").warning("⚠️ numero_stats.py não encontrado")
 
+# ── FastPatternMiner40s — Minerador dinâmico de 40s ─────────────────
+try:
+    from fast_pattern_miner_40s import FastPatternMiner40s, iniciar_miner_40s
+    _MINER_40S_DISPONIVEL = True
+except ImportError:
+    _MINER_40S_DISPONIVEL = False
+    logging.getLogger("BlazeBotVP").warning("⚠️ fast_pattern_miner_40s.py não encontrado")
+
 if sys.platform == "win32":
     try:
         os.system("chcp 65001 >nul")
@@ -6443,6 +6451,9 @@ class BlazeBot:
         self._rt_ultima_mine_ts: str = ""     # timestamp da última mineração RT
         self._rt_total_minerados: int = 0     # total acumulado de padrões minerados RT
 
+        # ── FastPatternMiner40s — Minerador contínuo de 40s ───────
+        self.miner_40s: Optional[FastPatternMiner40s] = None if not _MINER_40S_DISPONIVEL else FastPatternMiner40s()
+
         # ── Sistema de Categorias por Resultado ─────────────────
         # CAT1 = ganhou na 1ª  | CAT2 = 1 loss | CAT3 = 2 losses
         # WIN em qualquer → volta CAT1
@@ -6664,6 +6675,10 @@ class BlazeBot:
             return None
 
     async def close(self) -> None:
+        # ── Parar FastPatternMiner40s ─────────────────────────────
+        if self.miner_40s:
+            await self.miner_40s.parar()
+        
         if self._session and not self._session.closed:
             await self._session.close()
         if self._tg_client and self._tg_client.is_connected():
@@ -9084,6 +9099,12 @@ class BlazeBot:
         await self._carregar_historico_inicial()
         self.last_relatorio_3min = time.time()
         asyncio.create_task(self.minerador._executar())
+        
+        # ── Iniciar FastPatternMiner40s ───────────────────────────
+        if self.miner_40s:
+            await self.miner_40s.iniciar(lambda: self.history_buffer)
+            log.info("✅ FastPatternMiner40s iniciado com sucesso")
+        
         while True:
             try:
                 await self._loop_tick()
