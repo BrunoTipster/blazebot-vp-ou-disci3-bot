@@ -77,10 +77,11 @@ COLOR_PAYOUT                = {"V": 2.0, "P": 2.0, "B": 14.0}  # Branco paga 14x
 WIN_STREAK_LIMIT       = 3
 COLOR_COOLDOWN_SECONDS = 210
 
-# AJUSTADO: Gale2 eliminado — winrate 65% < break-even 66.7% = EV negativo
-GALE_MAX_VERMELHO = 1
-# Estatística: 39W/21L no gale2 → corrói banca a longo prazo
-GALE_MAX_PRETO    = 1
+# ATUALIZADO: 8 NÍVEIS DE MARTINGALE (0-7 gales)
+# Gale 1-7 habilitados — entrada base R$1.00 × 2^gale
+GALE_MAX_VERMELHO = 7
+# 8 níveis: R$1, R$2, R$4, R$8, R$16, R$32, R$64, R$128
+GALE_MAX_PRETO    = 7
 
 AB_REPORT_INTERVAL = 11
 
@@ -4595,36 +4596,52 @@ class GestorBancaProgressiva:
     """
     FILENAME = "banca_saldo_e_nivel.json"
 
-    def __init__(self, banca_inicial: float = 500.0, entrada_base: float = 1.0):
+    def __init__(self, banca_inicial: float = 10000.0, entrada_base: float = 1.0):
         self.banca_inicial  = banca_inicial
         self.entrada_base   = entrada_base   # R$ 1,00
         self.banca_atual    = banca_inicial
-        self.nivel_atual    = 1              # 1 = entrada base, 2 = G1, 3 = G2
+        self.nivel_atual    = 1              # 1 = entrada base, 2 = G1, ..., 8 = G7
 
-        # Tabela martingale: entrada × 2^(gale)
+        # Tabela martingale: entrada × 2^(gale) — 8 NÍVEIS
         self.TABELA = {
             1: round(entrada_base,          2),   # R$ 1,00  — sinal direto
             2: round(entrada_base * 2.0,    2),   # R$ 2,00  — Gale 1
             3: round(entrada_base * 4.0,    2),   # R$ 4,00  — Gale 2
+            4: round(entrada_base * 8.0,    2),   # R$ 8,00  — Gale 3
+            5: round(entrada_base * 16.0,   2),   # R$ 16,00 — Gale 4
+            6: round(entrada_base * 32.0,   2),   # R$ 32,00 — Gale 5
+            7: round(entrada_base * 64.0,   2),   # R$ 64,00 — Gale 6
+            8: round(entrada_base * 128.0,  2),   # R$ 128,00— Gale 7
         }
 
         # Contadores por tipo
         self.wins_direto    = 0;  self.losses_direto   = 0
         self.wins_gale1     = 0;  self.losses_gale1    = 0
         self.wins_gale2     = 0;  self.losses_gale2    = 0
+        self.wins_gale3     = 0;  self.losses_gale3    = 0
+        self.wins_gale4     = 0;  self.losses_gale4    = 0
+        self.wins_gale5     = 0;  self.losses_gale5    = 0
+        self.wins_gale6     = 0;  self.losses_gale6    = 0
+        self.wins_gale7     = 0;  self.losses_gale7    = 0
         self.wins_cor_dom   = 0;  self.losses_cor_dom  = 0
 
         # PnL real por tipo
         self.pnl_direto     = 0.0
         self.pnl_gale1      = 0.0
         self.pnl_gale2      = 0.0
+        self.pnl_gale3      = 0.0
+        self.pnl_gale4      = 0.0
+        self.pnl_gale5      = 0.0
+        self.pnl_gale6      = 0.0
+        self.pnl_gale7      = 0.0
         self.pnl_cor_dom    = 0.0
 
         self._load()
         log.info(
             f"💰 Banca Martingale | R${self.banca_atual:.2f} | "
             f"base=R${self.entrada_base:.2f} | "
-            f"G1=R${self.TABELA[2]:.2f} | G2=R${self.TABELA[3]:.2f}"
+            f"G1=R${self.TABELA[2]:.2f} | G2=R${self.TABELA[3]:.2f} | ... | G7=R${self.TABELA[8]:.2f} "
+            f"| 8 NÍVEIS"
         )
 
     # ── Persistência ───────────────────────────────────────────
@@ -4644,11 +4661,26 @@ class GestorBancaProgressiva:
                     self.losses_gale1   = d.get("losses_gale1",   0)
                     self.wins_gale2     = d.get("wins_gale2",     0)
                     self.losses_gale2   = d.get("losses_gale2",   0)
+                    self.wins_gale3     = d.get("wins_gale3",     0)
+                    self.losses_gale3   = d.get("losses_gale3",   0)
+                    self.wins_gale4     = d.get("wins_gale4",     0)
+                    self.losses_gale4   = d.get("losses_gale4",   0)
+                    self.wins_gale5     = d.get("wins_gale5",     0)
+                    self.losses_gale5   = d.get("losses_gale5",   0)
+                    self.wins_gale6     = d.get("wins_gale6",     0)
+                    self.losses_gale6   = d.get("losses_gale6",   0)
+                    self.wins_gale7     = d.get("wins_gale7",     0)
+                    self.losses_gale7   = d.get("losses_gale7",   0)
                     self.wins_cor_dom   = d.get("wins_cor_dom",   0)
                     self.losses_cor_dom = d.get("losses_cor_dom", 0)
                     self.pnl_direto     = d.get("pnl_direto",    0.0)
                     self.pnl_gale1      = d.get("pnl_gale1",     0.0)
                     self.pnl_gale2      = d.get("pnl_gale2",     0.0)
+                    self.pnl_gale3      = d.get("pnl_gale3",     0.0)
+                    self.pnl_gale4      = d.get("pnl_gale4",     0.0)
+                    self.pnl_gale5      = d.get("pnl_gale5",     0.0)
+                    self.pnl_gale6      = d.get("pnl_gale6",     0.0)
+                    self.pnl_gale7      = d.get("pnl_gale7",     0.0)
                     self.pnl_cor_dom    = d.get("pnl_cor_dom",   0.0)
                     log.info(f"Banca restaurada: R${self.banca_atual:.2f} | Nível {self.nivel_atual}")
                 else:
@@ -4674,11 +4706,26 @@ class GestorBancaProgressiva:
                     "losses_gale1":   self.losses_gale1,
                     "wins_gale2":     self.wins_gale2,
                     "losses_gale2":   self.losses_gale2,
+                    "wins_gale3":     self.wins_gale3,
+                    "losses_gale3":   self.losses_gale3,
+                    "wins_gale4":     self.wins_gale4,
+                    "losses_gale4":   self.losses_gale4,
+                    "wins_gale5":     self.wins_gale5,
+                    "losses_gale5":   self.losses_gale5,
+                    "wins_gale6":     self.wins_gale6,
+                    "losses_gale6":   self.losses_gale6,
+                    "wins_gale7":     self.wins_gale7,
+                    "losses_gale7":   self.losses_gale7,
                     "wins_cor_dom":   self.wins_cor_dom,
                     "losses_cor_dom": self.losses_cor_dom,
                     "pnl_direto":     round(self.pnl_direto,   2),
                     "pnl_gale1":      round(self.pnl_gale1,    2),
                     "pnl_gale2":      round(self.pnl_gale2,    2),
+                    "pnl_gale3":      round(self.pnl_gale3,    2),
+                    "pnl_gale4":      round(self.pnl_gale4,    2),
+                    "pnl_gale5":      round(self.pnl_gale5,    2),
+                    "pnl_gale6":      round(self.pnl_gale6,    2),
+                    "pnl_gale7":      round(self.pnl_gale7,    2),
                     "pnl_cor_dom":    round(self.pnl_cor_dom,  2),
                 }, f, indent=4, ensure_ascii=False)
         except Exception as e:
@@ -4719,9 +4766,24 @@ class GestorBancaProgressiva:
         elif gale_attempt == 1:
             self.wins_gale1  += 1
             self.pnl_gale1   += lucro
-        else:
+        elif gale_attempt == 2:
             self.wins_gale2  += 1
             self.pnl_gale2   += lucro
+        elif gale_attempt == 3:
+            self.wins_gale3  += 1
+            self.pnl_gale3   += lucro
+        elif gale_attempt == 4:
+            self.wins_gale4  += 1
+            self.pnl_gale4   += lucro
+        elif gale_attempt == 5:
+            self.wins_gale5  += 1
+            self.pnl_gale5   += lucro
+        elif gale_attempt == 6:
+            self.wins_gale6  += 1
+            self.pnl_gale6   += lucro
+        elif gale_attempt == 7:
+            self.wins_gale7  += 1
+            self.pnl_gale7   += lucro
 
         self.banca_atual += lucro
         self.nivel_atual  = 1   # reseta martingale
@@ -4737,7 +4799,7 @@ class GestorBancaProgressiva:
         LOSS:
           - Deduz o valor apostado da banca
           - Se ainda tem gale disponível → avança nível (dobra)
-          - Se perdeu o gale 2 (gale_attempt=2) → reseta para nível 1
+          - Se perdeu o gale 7 (gale_attempt=7) → reseta para nível 1
         """
         valor_apostado = self.get_valor_aposta()
         prejuizo       = valor_apostado  # perde o que apostou
@@ -4748,14 +4810,29 @@ class GestorBancaProgressiva:
         elif gale_attempt == 1:
             self.losses_gale1  += 1
             self.pnl_gale1     -= prejuizo
-        else:
+        elif gale_attempt == 2:
             self.losses_gale2  += 1
             self.pnl_gale2     -= prejuizo
+        elif gale_attempt == 3:
+            self.losses_gale3  += 1
+            self.pnl_gale3     -= prejuizo
+        elif gale_attempt == 4:
+            self.losses_gale4  += 1
+            self.pnl_gale4     -= prejuizo
+        elif gale_attempt == 5:
+            self.losses_gale5  += 1
+            self.pnl_gale5     -= prejuizo
+        elif gale_attempt == 6:
+            self.losses_gale6  += 1
+            self.pnl_gale6     -= prejuizo
+        elif gale_attempt == 7:
+            self.losses_gale7  += 1
+            self.pnl_gale7     -= prejuizo
 
         self.banca_atual -= prejuizo
 
-        # Martingale: avança nível se ainda tem gale
-        if self.nivel_atual < 3:
+        # Martingale: avança nível se ainda tem gale (máximo 8 níveis)
+        if self.nivel_atual < 8:
             self.nivel_atual += 1
             proximo = self.TABELA.get(self.nivel_atual, self.entrada_base)
             log.info(
@@ -4764,7 +4841,7 @@ class GestorBancaProgressiva:
                 f"⬆️ martingale → R${proximo:.2f}"
             )
         else:
-            # Perdeu G2 — reseta ciclo
+            # Perdeu G7 — reseta ciclo
             self.nivel_atual = 1
             log.info(
                 f"LOSS gale={gale_attempt} (G2) | -R${prejuizo:.2f} | "
@@ -4797,7 +4874,8 @@ class GestorBancaProgressiva:
         def sinal(v):
             return ("+" if v >= 0 else "") + f"R${v:.2f}"
 
-        pnl_total = self.pnl_direto + self.pnl_gale1 + self.pnl_gale2 + self.pnl_cor_dom
+        pnl_total = (self.pnl_direto + self.pnl_gale1 + self.pnl_gale2 + self.pnl_gale3 + 
+                     self.pnl_gale4 + self.pnl_gale5 + self.pnl_gale6 + self.pnl_gale7 + self.pnl_cor_dom)
         return (
             f"🎯 <b>Win Direto</b>:  "
             f"✅{self.wins_direto} ❌{self.losses_direto}  {wr(self.wins_direto,self.losses_direto)}  "
@@ -4808,6 +4886,21 @@ class GestorBancaProgressiva:
             f"2️⃣ <b>Gale 2</b> (R${self.TABELA[3]:.2f}):  "
             f"✅{self.wins_gale2} ❌{self.losses_gale2}  {wr(self.wins_gale2,self.losses_gale2)}  "
             f"{sinal(self.pnl_gale2)}\n"
+            f"3️⃣ <b>Gale 3</b> (R${self.TABELA[4]:.2f}):  "
+            f"✅{self.wins_gale3} ❌{self.losses_gale3}  {wr(self.wins_gale3,self.losses_gale3)}  "
+            f"{sinal(self.pnl_gale3)}\n"
+            f"4️⃣ <b>Gale 4</b> (R${self.TABELA[5]:.2f}):  "
+            f"✅{self.wins_gale4} ❌{self.losses_gale4}  {wr(self.wins_gale4,self.losses_gale4)}  "
+            f"{sinal(self.pnl_gale4)}\n"
+            f"5️⃣ <b>Gale 5</b> (R${self.TABELA[6]:.2f}):  "
+            f"✅{self.wins_gale5} ❌{self.losses_gale5}  {wr(self.wins_gale5,self.losses_gale5)}  "
+            f"{sinal(self.pnl_gale5)}\n"
+            f"6️⃣ <b>Gale 6</b> (R${self.TABELA[7]:.2f}):  "
+            f"✅{self.wins_gale6} ❌{self.losses_gale6}  {wr(self.wins_gale6,self.losses_gale6)}  "
+            f"{sinal(self.pnl_gale6)}\n"
+            f"7️⃣ <b>Gale 7</b> (R${self.TABELA[8]:.2f}):  "
+            f"✅{self.wins_gale7} ❌{self.losses_gale7}  {wr(self.wins_gale7,self.losses_gale7)}  "
+            f"{sinal(self.pnl_gale7)}\n"
             f"🎨 <b>Cor Dom</b>:  "
             f"✅{self.wins_cor_dom} ❌{self.losses_cor_dom}  {wr(self.wins_cor_dom,self.losses_cor_dom)}  "
             f"{sinal(self.pnl_cor_dom)}\n"

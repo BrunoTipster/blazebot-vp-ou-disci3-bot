@@ -62,7 +62,8 @@ class FastPatternMiner40s:
         self.task = None
         
         # ── Controle de frequência de sinais (40s) ─────────────────
-        self.ultima_geracao_sinal_ts = 0.0  # Epoch do último sinal gerado
+        import time
+        self.ultima_geracao_sinal_ts = time.time()  # Epoch do último sinal gerado (INICIALIZADO AGORA)
         self.sinal_pronto = None  # Sinal pronto para envio (ou None)
         
         # ── Rastreamento de Losses ─────────────────────────────────
