@@ -20,7 +20,7 @@ async def test_miner_basico():
     miner = FastPatternMiner40s()
     assert miner.CYCLE_SECONDS == 40, "Cycle deveria ser 40s"
     assert miner.JANELA_RODADAS == 300, "Janela deveria ser 300"
-    assert miner.MIN_WINRATE == 0.78, "WR min deveria ser 0.78"
+    assert miner.MIN_WINRATE == 0.80, "WR min deveria ser 0.80"
     assert miner.MIN_OCORRENCIAS == 6, "Ocorrências min deveria ser 6"
     assert miner.TOP_KEEP == 40, "Top keep deveria ser 40"
     
@@ -154,6 +154,152 @@ async def test_resumo_ciclo():
     
     print("\n   ✅ Resumo formatado corretamente")
 
+async def test_rastreamento_losses():
+    """Teste 5: Validar rastreamento de losses e sequências"""
+    print("\n" + "=" * 60)
+    print("🧪 Teste 5: Rastreamento de losses e sequências")
+    print("=" * 60)
+    
+    miner = FastPatternMiner40s()
+    
+    # Teste inicial: nenhum loss
+    assert miner.total_losses == 0, "Deveria começar com 0 losses"
+    assert miner.max_loss_sequence == 0, "Deveria começar com 0 max sequence"
+    print("✅ Inicialização de losses validada")
+    
+    # Teste 1: Registrar 3 losses seguidos
+    miner.registrar_loss()
+    miner.registrar_loss()
+    miner.registrar_loss()
+    
+    assert miner.total_losses == 3, "Deveria ter 3 losses registrados"
+    assert miner.loss_sequence_atual == 3, "Sequência atual deveria ser 3"
+    assert miner.max_loss_sequence == 3, "Max sequence deveria ser 3"
+    print("✅ 3 losses consecutivos registrados")
+    print(f"   Total: {miner.total_losses} | Max Seq: {miner.max_loss_sequence} | Seq Atual: {miner.loss_sequence_atual}")
+    
+    # Teste 2: Registrar win (reseta sequência)
+    miner.registrar_win()
+    
+    assert miner.loss_sequence_atual == 0, "Sequência atual deveria ser resetada"
+    assert miner.max_loss_sequence == 3, "Max sequence deveria manter 3"
+    assert len(miner.historico_losses) == 1, "Deveria ter 1 sequência no histórico"
+    print("✅ Win reseta sequência atual")
+    print(f"   Seq Atual após win: {miner.loss_sequence_atual} | Histórico: {miner.historico_losses}")
+    
+    # Teste 3: Outra sequência (2 losses)
+    miner.registrar_loss()
+    miner.registrar_loss()
+    
+    assert miner.total_losses == 5, "Deveria ter 5 losses total"
+    assert miner.loss_sequence_atual == 2, "Sequência atual deveria ser 2"
+    assert miner.max_loss_sequence == 3, "Max sequence ainda deveria ser 3"
+    print("✅ Segunda sequência de 2 losses registrada")
+    print(f"   Total: {miner.total_losses} | Max Seq: {miner.max_loss_sequence} | Seq Atual: {miner.loss_sequence_atual}")
+    
+    # Teste 4: Win e depois 5 losses (nova máxima)
+    miner.registrar_win()
+    for _ in range(5):
+        miner.registrar_loss()
+    
+    assert miner.max_loss_sequence == 5, "Max sequence deveria ser 5 (nova máxima)"
+    assert miner.total_losses == 10, "Total deveria ser 10"
+    print("✅ Nova sequência máxima (5 losses) registrada")
+    print(f"   Total: {miner.total_losses} | Max Seq: {miner.max_loss_sequence}")
+    
+    # Teste 5: Obter estatísticas
+    stats = miner.obter_stats_losses()
+    
+    assert stats["total_losses"] == 10
+    assert stats["max_loss_sequence"] == 5
+    assert stats["loss_sequence_atual"] == 5
+    assert len(stats["historico"]) > 0
+    print("✅ Estatísticas retornadas corretamente")
+    print(f"   Stats: {stats}")
+    
+    print("✅ Rastreamento de losses validado com sucesso")
+
+
+async def test_sinal_com_losses():
+    """Teste 6: Validar que sinal inclui informações de losses"""
+    print("\n" + "=" * 60)
+    print("🧪 Teste 6: Sinal inclui estatísticas de losses")
+    print("=" * 60)
+    
+    miner = FastPatternMiner40s()
+    
+    # Adicionar padrões
+    from fast_pattern_miner_40s import PatternInfo
+    p1 = PatternInfo(
+        pattern=('V', 'P', 'V', 'P', 'V'),
+        prediction='V',
+        winrate=0.85,
+        wins=17,
+        total=20
+    )
+    miner.padroes_ativos = [p1]
+    miner.sinal_agregado = 'V'
+    
+    # Registrar alguns losses
+    miner.registrar_loss()
+    miner.registrar_loss()
+    miner.registrar_loss()
+    
+    # Gerar sinal
+    sinal = miner.gerar_sinal()
+    
+    assert sinal is not None, "Deveria gerar sinal"
+    assert "losses" in sinal, "Sinal deveria incluir dados de losses"
+    assert sinal["losses"]["total"] == 3, "Total de losses deveria ser 3"
+    assert sinal["losses"]["max_sequence"] == 3, "Max sequence deveria ser 3"
+    assert sinal["losses"]["atual"] == 3, "Sequência atual deveria ser 3"
+    
+    print("✅ Sinal inclui estatísticas de losses")
+    print(f"   Losses: {sinal['losses']}")
+    
+    print("✅ Teste validado com sucesso")
+
+
+async def test_controle_sinal_40s():
+    """Teste 7: Validar controle de frequência de sinais (40s)"""
+    print("\n" + "=" * 60)
+    print("🧪 Teste 7: Controle de frequência de sinais (40s)")
+    print("=" * 60)
+    
+    miner = FastPatternMiner40s()
+    
+    # Adicionar padrões de teste
+    from fast_pattern_miner_40s import PatternInfo
+    p1 = PatternInfo(
+        pattern=('V', 'P', 'V', 'P', 'V'),
+        prediction='V',
+        winrate=0.85,
+        wins=17,
+        total=20
+    )
+    miner.padroes_ativos = [p1]
+    miner.sinal_agregado = 'V'
+    
+    # Teste 1: Pode gerar sinal no início
+    pode = miner.pode_gerar_sinal()
+    assert pode, "Deveria poder gerar sinal na primeira vez"
+    print("✅ Pode gerar sinal inicialmente")
+    
+    # Teste 2: Gera sinal
+    sinal = miner.gerar_sinal()
+    assert sinal is not None, "Deveria gerar sinal"
+    assert sinal['sinal'] == 'V', "Sinal deveria ser V"
+    assert sinal['ciclo'] == 0, "Ciclo deveria ser 0"
+    print(f"✅ Sinal gerado: {sinal['sinal']} | Ciclo {sinal['ciclo']}")
+    
+    # Teste 3: Não pode gerar sinal logo depois (ainda em cooldown)
+    sinal2 = miner.gerar_sinal()
+    assert sinal2 is None, "Não deveria gerar sinal em cooldown de 40s"
+    print("✅ Cooldown de 40s respeitado (sinal negado)")
+    
+    print("✅ Controle de frequência validado com sucesso")
+
+
 async def main():
     """Executa todos os testes"""
     print("\n" + "🧪" * 30)
@@ -172,6 +318,15 @@ async def main():
         
         # Teste 4
         await test_resumo_ciclo()
+        
+        # Teste 5
+        await test_rastreamento_losses()
+        
+        # Teste 6
+        await test_sinal_com_losses()
+        
+        # Teste 7
+        await test_controle_sinal_40s()
         
         print("\n" + "=" * 60)
         print("✅ TODOS OS TESTES PASSARAM!")

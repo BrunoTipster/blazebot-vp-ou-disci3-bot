@@ -2,19 +2,21 @@
 # FastPatternMiner40s — Minerador de Padrões Recalculado a Cada 40s
 # ══════════════════════════════════════════════════════════════════
 # 
-# Objetivo: Análise extremamente dinâmica
-#   • Recalcula DO ZERO a cada 40 segundos
-#   • Analisa ÚLTIMAS 300 rodadas (janela deslizante)
-#   • Filtro rígido: WR ≥ 78% E ocorrências ≥ 6
+# Objetivo: Análise de padrões em ciclos de 40 segundos
+#   • A cada 40s: varre TODAS as sequências de 5 e 6 cores
+#   • Calcula o WR de cada sequência NO MOMENTO ATUAL
+#   • Compara últimas 300 rodadas (janela deslizante)
+#   • Filtro rígido: WR ≥ 80% E ocorrências ≥ 6
 #   • Mantém apenas TOP 40 padrões
 #   • Padrões fora do top desaparecem naquele ciclo
-#   • Emite 1 sinal por ciclo (melhor padrão com previsão agregada)
+#   • Gera 1 sinal por ciclo (melhor padrão ou agregado)
+#   • RESTRIÇÃO: Sinal só pode ser enviado a cada 40 segundos
 #
 
 import asyncio
 import logging
 from datetime import datetime
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass, field
 
 log = logging.getLogger("BlazeBotVP")
@@ -35,19 +37,19 @@ class PatternInfo:
 class FastPatternMiner40s:
     """
     Minerador contínuo que roda a cada 40 segundos:
-      1. Tira as últimas 300 rodadas do buffer de histórico
-      2. Extrai sequências de 5 e 6 cores
-      3. Calcula win-rate e ocorrências de cada sequência
-      4. Filtra: WR >= 0.78 E ocorrências >= 6
-      5. Ordena por WR desc (com tie-breaker de volume)
-      6. Mantém apenas TOP 40
-      7. Descarta tudo mais (aquele ciclo)
-      8. Retorna lista e também um "sinal agregado" (cor dominante no top 40)
+      1. Varre TODAS as sequências de 5 e 6 cores da janela (últimas 300 rodadas)
+      2. Calcula WR de cada sequência NO MOMENTO ATUAL (baseado na janela)
+      3. Filtra: WR >= 0.80 E ocorrências >= 6
+      4. Ordena por WR desc (com tie-breaker de volume)
+      5. Mantém apenas TOP 40
+      6. Descarta tudo mais (aquele ciclo)
+      7. Gera 1 sinal por ciclo (melhor padrão ou agregado)
+      8. RESTRIÇÃO: Sinais SÓ a cada 40 segundos (não em tempo real)
     """
     
     CYCLE_SECONDS = 40      # Roda a cada 40s
     JANELA_RODADAS = 300    # Analisa últimas 300 rodadas
-    MIN_WINRATE = 0.78      # 78% mínimo
+    MIN_WINRATE = 0.80      # 80% mínimo — AUMENTADO (era 0.78)
     MIN_OCORRENCIAS = 6     # Ocorrências mínimas
     TOP_KEEP = 40           # Mantém apenas top 40
     TAMANHOS = [5, 6]       # Tamanhos de padrão testados
@@ -58,6 +60,16 @@ class FastPatternMiner40s:
         self.ciclos_rodados = 0
         self.sinal_agregado = None  # Cor dominante do último ciclo
         self.task = None
+        
+        # ── Controle de frequência de sinais (40s) ─────────────────
+        self.ultima_geracao_sinal_ts = 0.0  # Epoch do último sinal gerado
+        self.sinal_pronto = None  # Sinal pronto para envio (ou None)
+        
+        # ── Rastreamento de Losses ─────────────────────────────────
+        self.total_losses = 0              # Total de losses acumulado
+        self.max_loss_sequence = 0         # Maior sequência de losses
+        self.loss_sequence_atual = 0       # Sequência de losses em andamento
+        self.historico_losses = []         # [(timestamp, tamanho_seq), ...]
     
     async def iniciar(self, get_history_buffer) -> None:
         """
@@ -237,7 +249,7 @@ class FastPatternMiner40s:
         if not self.padroes_ativos:
             return (
                 f"⏱️  <b>Ciclo {self.ciclos_rodados}</b> — {self.ultima_atualizacao}\n"
-                f"─ Nenhum padrão atende critérios (WR≥78%, oc≥6)"
+                f"─ Nenhum padrão atende critérios (WR≥80%, oc≥6)"
             )
         
         top3 = self.padroes_ativos[:3]
@@ -264,8 +276,124 @@ class FastPatternMiner40s:
             f"─────────────────────────────\n"
             f"<b>TOP 3:</b>\n"
             f"{top_str}\n"
-            f"<i>WR mín=78% | Oc mín=6 | Janela=300 rodadas | Recalcula a cada 40s</i>"
+            f"<i>WR mín=80% | Oc mín=6 | Janela=300 rodadas | Recalcula a cada 40s</i>"
         )
+    
+    def pode_gerar_sinal(self) -> bool:
+        """
+        Verifica se já passaram 40 segundos desde o último sinal.
+        
+        Returns:
+            True se pode gerar novo sinal, False se ainda está no cooldown
+        """
+        import time
+        agora = time.time()
+        tempo_decorrido = agora - self.ultima_geracao_sinal_ts
+        return tempo_decorrido >= self.CYCLE_SECONDS
+    
+    def registrar_loss(self) -> None:
+        """
+        Registra um loss. Deve ser chamado pelo bot quando um padrão perder.
+        Atualiza contadores de loss e sequências.
+        """
+        self.total_losses += 1
+        self.loss_sequence_atual += 1
+        
+        # Atualiza máximo se necessário
+        if self.loss_sequence_atual > self.max_loss_sequence:
+            self.max_loss_sequence = self.loss_sequence_atual
+            log.debug(f"🔴 Nova max loss sequence: {self.max_loss_sequence}")
+    
+    def registrar_win(self) -> None:
+        """
+        Registra uma vitória. Reseta a sequência de losses atual.
+        """
+        if self.loss_sequence_atual > 0:
+            # Salva a sequência que acabou
+            self.historico_losses.append({
+                "tamanho": self.loss_sequence_atual,
+                "timestamp": datetime.now().strftime("%H:%M:%S")
+            })
+            log.debug(f"✅ Sequência de loss finalizada: {self.loss_sequence_atual}")
+        
+        self.loss_sequence_atual = 0
+    
+    def obter_stats_losses(self) -> Dict:
+        """
+        Retorna estatísticas atuais de losses.
+        
+        Returns:
+            {
+              "total_losses": int,
+              "max_loss_sequence": int,
+              "loss_sequence_atual": int,
+              "historico": [...]
+            }
+        """
+        return {
+            "total_losses": self.total_losses,
+            "max_loss_sequence": self.max_loss_sequence,
+            "loss_sequence_atual": self.loss_sequence_atual,
+            "historico": self.historico_losses[-5:] if self.historico_losses else []
+        }
+    
+    def gerar_sinal(self) -> Dict:
+        """
+        Gera e retorna um sinal pronto para envio (se houver padrões válidos).
+        Respeita a restrição de 40 segundos entre sinais.
+        
+        Returns:
+            Dict com sinal ou None se ainda em cooldown ou sem padrões
+            {
+              "sinal": "V" ou "P",
+              "padroes": [list de top 3],
+              "ciclo": número do ciclo,
+              "timestamp": hora do sinal,
+              "agregado": cor agregada,
+              "losses": {                    ← NOVO: Estatísticas de losses
+                "total": int,
+                "max_sequence": int,
+                "atual": int
+              }
+            }
+            ou None se não pode gerar agora
+        """
+        import time
+        
+        if not self.pode_gerar_sinal():
+            return None  # Ainda em cooldown de 40s
+        
+        if not self.padroes_ativos:
+            return None  # Sem padrões válidos
+        
+        # Marca que gerou sinal agora
+        self.ultima_geracao_sinal_ts = time.time()
+        
+        # Retorna sinal baseado no melhor padrão
+        melhor = self.padroes_ativos[0]
+        top3 = self.padroes_ativos[:3]
+        
+        return {
+            "sinal": melhor.prediction,
+            "padroes": [
+                {
+                    "pattern": list(p.pattern),
+                    "pred": p.prediction,
+                    "wr": p.winrate,
+                    "wins": p.wins,
+                    "total": p.total
+                }
+                for p in top3
+            ],
+            "ciclo": self.ciclos_rodados,
+            "timestamp": datetime.now().strftime("%H:%M:%S"),
+            "agregado": self.sinal_agregado,
+            "losses": {
+                "total": self.total_losses,
+                "max_sequence": self.max_loss_sequence,
+                "atual": self.loss_sequence_atual
+            }
+        }
 
 
 # ══════════════════════════════════════════════════════════════════
